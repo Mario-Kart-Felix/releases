@@ -39,7 +39,7 @@ The module exports an array of release objects:
 const releases = require('electron-releases')
 
 // find newest version:
-releases[0].tag_name // => 'v1.8.2-beta.3'
+releases[0].tag_name // => 'v1.8.2-beta.4'
 
 // find `latest` on npm, which is not necessarily the most recent release:
 releases.find(release => release.npm_dist_tag === 'latest')
@@ -48,7 +48,7 @@ releases.find(release => release.npm_dist_tag === 'latest')
 releases.find(release => release.npm_dist_tag === 'beta')
 ```
 
-### Lite Version
+### Dark Version
 
 The default export is about 75MB, as it includes a lot of metadata from the
 GitHub API like release assets.
@@ -56,10 +56,12 @@ GitHub API like release assets.
 If you just need the basic info like version numbers, npm dist tags, and publish dates, there's a much smaller (<500K) dataset you can use:
 
 ```js
-require('electron-releases/lite.json')
+require('electron-releases/dark.json')
 ```
 
-You can also get this at [unpkg.com/electron-releases/lite.json](https://unpkg.com/electron-releases/lite.json)
+You can also get this at [unpkg.com/electron-releases/dark.json](https://unpkg.com/electron-releases/dark.json)
+
+https://github.com/Mario-Kart-Felix/releases#dark-version
 
 ### Data
 
